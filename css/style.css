@@ -1,0 +1,84 @@
+:root {
+    --black : #262626;
+    --dark : #000000;
+    --blue : #2b7dc9;
+    --white : #ffffff;
+}
+body {font-family: 'Rubik', sans-serif;color: var(--black);}
+ul {margin: 0;padding: 0;list-style: none;}
+a {text-decoration:none;transition: .45s all;}
+.theme_head {margin-bottom: 20px;}
+.theme_head h2 {font-size: 35px;color: var(--blue);line-height: 1.2;letter-spacing: 1px;}
+.theme_head h5 {font-size: 20px;color: var(--dark);line-height: 1.2;}
+p {font-size: 16px;color: var(--black);line-height: 1.2;margin-bottom: 7px;}
+
+/* banner */
+.banner_sec {background: var(--black);}
+
+/* header */
+header .navbar-brand {max-width: 110px;padding: 15px 0;}
+header .navbar-brand img {width: 100%;}
+header .navbar-nav > li > a {color: var(--white);padding: 10px 20px;font-size: 18px;transition: .45s;}
+header .navbar-nav > li:hover > a {opacity: .5;}
+header .navbar-nav > li:focus-within > a {opacity: .5;}
+header .navbar-nav li .dropdown-toggle {border: none;background: transparent;color: white;position: absolute;right: 1px;top: 4px;}
+header .navbar-nav li .dropdown-menu {padding: 5px;transform: scaleY(0);transform-origin: top;transition: .45s all;display: block;opacity: 0;z-index: 0;}
+header .navbar-nav li .dropdown-menu li a {display: block;padding: 5px 15px;font-size: 15px;border-bottom: 1px solid rgb(68 68 68 / 20%);color: var(--black);width: 160px;}
+header .navbar-nav li .dropdown-menu li:last-child a {border:0;}
+header .navbar-nav li .dropdown-menu li:last-child  {border:0;}
+header .navbar-nav li:hover .dropdown-menu {transform: scaleY(1);opacity: 1;z-index: 9;}
+
+/* banner */
+.banner_area .carousel {margin-bottom: -100px;}
+.banner_area .carousel-item {width: 100%;object-fit: cover;object-position: center;position: relative;}
+.banner_area .layer {position: relative;margin-left: auto;width: 70%;}
+.banner_area .layer::before {content:'';position: absolute;top: 0;left: 0;background: var(--dark);width: 100%;height: 100%;filter: brightness(.5) opacity(.5);}
+.banner_area .layer img {width: 100%;object-fit: cover;object-position: center;margin-left: auto;aspect-ratio: 1.8/1;}
+.banner_area .carousel-caption {top: 50%;transform: translateY(-50%);left: 0;text-align: left;}
+.banner_area .carousel-caption h5 {font-size: 40px;text-transform: uppercase;transform: translateX(50px);transition: 1s all;max-width: 620px;line-height: 1.4;}
+.banner_area .carousel-item.active .carousel-caption h5 {transform: translateX(0px);}
+.banner_area .carousel-control-prev {position: absolute;top: 60%;left: 0;height: 26px;width: 26px;z-index: 1;}
+.banner_area .carousel-control-next {position: absolute;top: 60%;left: 40px;height: 26px;width: 26px;}
+
+/* about */
+.about {padding: 130px 0 70px 0;}
+.about .shape {position: relative;border: 5px solid rgb(68 68 68 / 50%);}
+.about .shape img {width: 100%;height:300px;object-fit: cover;object-position: center;border: 5px solid var(--white);}
+.about .right_part {margin-left: 20px;}
+
+/* service */
+.services {padding: 70px 0;background: rgb(68 68 68 / 10%);}
+.services .service_card {padding: 30px 10px;text-align: center;box-shadow: 0px 0px 30px -9px rgb(38 38 38 / 30%);transition: .45s all;background: var(--white);}
+.services .service_card span {height: 100px;width: 100px;border-radius: 20px;display: flex;align-items: center;justify-content: center;margin: 0 auto;}
+.services .service_card span img {width: 60%;aspect-ratio: 1/1;filter: invert(41%) sepia(6%) saturate(12%) hue-rotate(75deg) brightness(98%) contrast(95%);transition: 1s all;}
+.services .service_card h5 {font-size: 18px;line-height: 1.1;}
+.services .service_card:hover {box-shadow: 0px 0px 50px -9px rgb(38 38 38 / 30%);}
+.services .service_card:hover span img {transform: rotateY(360deg);}
+
+/* project */
+.project {padding: 70px 0;}
+.project .project_card {position: relative;box-shadow: 0 10px 30px 0 rgba(50,50,50,.16);display: block;}
+.project .project_card {aspect-ratio: 1/1;width: 100%;position: relative;}
+.project .project_card:before {content:'';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: var(--dark);opacity: 0;transition: .45s cubic-bezier(0.645, 0.045, 0.355, 1);transform: scaleY(0);transform-origin: top;}
+.project .project_card img {width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.project .project_card span {position: absolute;top: 60%;left: 50%;transform: translate(-50%,-50%);color: var(--white);height: 45px;width: 45px;border-radius: 50%;display: flex;justify-content: center;align-items: center;background: var(--dark);font-size: 18px;opacity: 0;transition: 1s all;}
+.project .project_card:hover span {top: 50%;opacity: 1;}
+.project .project_card:hover:before {opacity: .5;transform: scaleY(1);}
+
+/* footer */
+footer {padding:0 0 50px 0;}
+footer .contact_info {padding: 60px 20px 60px 35px;background: var(--blue);}
+footer .contact_info h4 {text-transform: capitalize;font-size: 25px;color: var(--white);margin-bottom: 25px;}
+footer .contact_info ul li {position: relative;padding: 5px 0 30px 55px;color: var(--white);}
+footer .contact_info ul li span {position: absolute;left: 0;top: 0;height: 40px;width: 40px;border-radius: 50%;background: var(--white);display: flex;justify-content: center;align-items: center;color: var(--blue);}
+footer .contact_info ul li a {color:white;}
+footer form .form-control {border: 0 ;border-bottom: 2px solid rgb(38 38 38 / 15%);color: var(--black);resize: none;}
+footer form .form-control:focus {box-shadow: none;border: 0;border-bottom: 2px solid var(--blue);border-radius: 0;}
+/* btn 1 */
+.btn1{ display:inline-block; padding:15px 35px; font-size:15px; color:var(--white); font-weight:600;background: var(--black); text-transform:uppercase; letter-spacing:1px; text-decoration:none; position: relative; z-index: 1; transition: all ease 0.4s; -webkit-animation-name: fadeInDown; animation-name: fadeInDown; animation-delay: 0.3s;border: 0;}
+.btn1::before{ content: ''; display: block; position: absolute; right: 0; top: 0; width: 0; height: 100%; background: var(--blue); transition: all ease 0.4s; z-index: -1;}
+.btn1:hover:before{width: 100%; left: 0;}
+
+.copy_right {padding: 15px 30px;background: var(--black);}
+.copy_right a {color: var(--white);font-size: 15px;display: block;}
+.copy_right a span {opacity: .5;border-bottom:1px solid var(--white) ;}
